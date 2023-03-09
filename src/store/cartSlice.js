@@ -8,6 +8,7 @@ const cartSlice = createSlice({
             state.push(action.payload);
         },
         remove(state, action) {
+            // In this we filter only cart item and show them  that are not assign to remove
             return state.filter((item) => item.id !== action.payload);
         },
     },
